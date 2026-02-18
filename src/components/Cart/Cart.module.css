@@ -1,0 +1,59 @@
+.cartGrid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(min(var(--card-size), 100%), 1fr)
+  );
+  gap: var(--space-md);
+}
+
+span {
+  font-weight: 800;
+  color: var(--accent-primary);
+}
+
+.cards {
+  border: 1px solid var(--border-light);
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  background-color: var(--bg-surface);
+}
+
+.priceDisplay {
+  margin: var(--space-sm) 0 var(--space-md);
+}
+
+.errMessage {
+  text-align: center;
+  margin: var(--space-md) 0;
+  color: var(--text-dim);
+}
+
+.cartInputBox {
+  display: flex;
+  margin-top: var(--space-md);
+  gap: var(--space-sm);
+}
+
+.cartInputBox input {
+  border: 1px solid var(--border-light);
+  color: var(--text-primary);
+  padding: 0 var(--space-sm);
+  outline: 1px solid var(--text-primary);
+  border-radius: var(--radius-sm);
+  max-width: 100px;
+  text-align: center;
+}
+
+.cartInputBox button {
+  background-color: var(--accent-primary);
+  transition: background-color var(--transition-fs) ease;
+}
+.cartInputBox button:hover {
+  background-color: var(--accent-secondary);
+}
+
+.subtotalWrapper {
+  margin-top: var(--space-lg);
+  text-align: center;
+}
